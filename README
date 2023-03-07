@@ -1,0 +1,89 @@
+Problema 1 - cutii.c:
+    Timp de lucru: o ora
+    Am construit 2 functii, una pentru afisarea mesajului "Da"/"Nu"
+    si una pentru afisarea ciclurilor. Functia pentru afisarea mesajului
+    este de tip int si returneaza 1 pentru "Da" si 0 pentru "Nu".
+    Aceasta face pentru fiecare prizonier ciclul cutiilor parcurs de el
+    pana cand gaseste cutia cu numarul prizonierului sau pana si-a consumat
+    toate incercarile.
+    Functia pentru afisarea ciclurilor este de tip void. Se foloseste de
+    un vector caracteristic pentru a parcurge si afisa doar ciclurile noi.
+    Ea este apelata pentru fiecare prizonier si parcurge ciclul cutiilor
+    pana cand gaseste cutia cu numarul prizonierului.
+
+Problema 2 - lungi.c:
+    Timp de lucru: 4 ore
+    Am ales sa separ numerele in parte reala si parte imaginara si sa fac
+    operatiile pentru fiecare. Am luat fiecare caz de adunare/scadere
+    dintre 2 numere pozitive/negative. Am observat ca: daca numerele au
+    acelasi semn se face adunare, iar daca numerele sunt de semn opus se
+    face scadere. Pentru fiecare caz m-am gandit cum se face adunarea/scaderea
+    si daca rezultatul iese pozitiv/negativ. Am construit 4 functii: una 
+    pentru adunare, una pentru scadere, una cand avem operata + si una cand
+    avem operatia -, deoarece cazurile difera. Am actualizat bitul de semn 
+    manual in functie de caz. La final, am pus in a[] partea reala si cea
+    imaginara dupa efectuarea calculelor.
+
+Problema 3 - codificari.c:
+    Timp de lucru: 3 zile
+    Am construit cate o functie pentru fiecare codificare/decodificare.
+    CodificareA:
+        Construiesc o matrice. Calculez de cate linii si cate coloane am
+        nevoie, in functie de lungimea textului si a cheii. Pun in matrice
+        textul si completez cu spatii elementele ramase libere.
+        Imi construiesc un vector de indici pentru a face sortarea.
+        Sortez cheia si retin in vectorul de indici indicii coloanelor sortate.
+        Codificarea este rezultatul parcurgerii matricei pe coloane in ordinea
+        indicilor din vector.
+    CodificareaB:
+        Construiesc 2 vectori in care separ textul: partea de text ce trebuie
+        codificata si pusa la inceput si partea ce trebuie mutata la final.
+        Din cauza caracterelor din codul ASCII dintre Z si a, am decis sa imi
+        fac propriul vector cu alfabetul. Trebuie sa gasesc pentru fiecare
+        caracter ce trebuie codificat indicele corespunzator lui in vectorul
+        meu. La final, pun in s[] partea codificata si apoi partea mutata
+        spre dreapta.
+    DecodificareaA:
+        Imi construiesc un vector de indici pentru a face sortarea.
+        Sortez cheia si retin in vectorul de indici indicii coloanelor sortate.
+        Construiesc o matrice. Calculez de cate linii si cate coloane am
+        nevoie, in functie de lungimea textului si a cheii. Pun in matrice
+        textul pe coloane si completez cu spatii elementele ramase libere.
+        Observ ca elementele din vectorul de indici trebuie inversate cu
+        indicii vectorilor. Fac asta intr-un nou vector de indici.
+        Decodificarea este rezultatul parcurgerii matricei pornind de la
+        linia 1 si coloana in ordinea indicilor din vector.
+    DecodificareaB:
+        Construiesc 2 vectori in care separ textul: partea de text ce trebuie
+        decodificata si pusa la final si partea ce trebuie mutata la inceput.
+        Din cauza caracterelor din codul ASCII dintre Z si a, am decis sa imi
+        fac propriul vector cu alfabetul. Trebuie sa gasesc pentru fiecare
+        caracter ce trebuie decodificat indicele corespunzator lui in vectorul
+        meu. La final, pun in s[] partea codificata si apoi partea mutata
+        spre dreapta.
+
+Problema 4 - masini.c:
+    Timp de lucru: 4 ore
+    Am memorat datele despre masini in matrici/vectori specifici datelor.
+    Am facut cate o functie pentru fiecare cerinta:
+    Cerinta A:
+        Am memorat intr-un vector de dimensiune 4, intializat cu 0 cate
+        masini au ca combustibil benzina, motorina, hibrid, electric.
+        Fiecare combustibil are indicele lui.
+    Cerinta B:
+        Memorez in marca[][] brand-urile unice ale masinilor, in total_l
+        consumul total de combustibil al unui anumit brand si in total_s
+        suma totala platita pentru un anumit brand.
+        Fiecare brand are acelasi indice in marca, total_l si total_s.
+        Apelez functia cerintaB pentru fiecare masina citita si verific
+        daca brand-ul acesteia exista deja in marca. Daca nu, il adaug.
+        Calculez consumul si suma platita pentru fiecare masina si le adaug
+        in total_l si total_s.
+    Cerinta C:
+        Memorez intr-un vector caracteristic index[] daca numarul masinilor
+        este valid sau invalid.
+        Fiecare masina are acelasi indice in brand, numar si index.
+        Verific fiecare litera/cifra din numarul de inmatriculare al fiecarei
+        masini si ii dau lui index[i] valoarea 1 daca numarul masinii i este
+        invalid. Daca toate valorile din index[] sunt 0 => toate numerele de
+        inmatriculare ale masinilor sunt corecte.
